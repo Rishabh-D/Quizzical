@@ -91,28 +91,30 @@ export default function QuizePage () {
     }))
   }
 
+  const playAgainBtn = !showAns.show
+    ? <button className="solutions" onClick={checkAnswer}> Check answers </button>
+    : (
+      <div className="result">
+        <p>
+          {' '}
+          You scored
+          {' '}
+          {showAns.score}
+          /
+          {quizes.length}
+          {' '}
+          correct answers
+          {' '}
+        </p>
+        <button className="solutions" onClick={setPlay}> play Again </button>
+        <button className="endGame" onClick={endGame}> End </button>
+      </div>
+      )
+
   return (
     <div className="quize-page">
       {qna}
-      {!showAns.show
-        ? <button className="solutions" onClick={checkAnswer}> Check answers </button>
-        : (
-          <div className="result">
-            <p>
-              {' '}
-              You scored
-              {' '}
-              {showAns.score}
-              /
-              {quizes.length}
-              {' '}
-              correct answers
-              {' '}
-            </p>
-            <button className="solutions" onClick={setPlay}> play Again </button>
-            <button className="endGame" onClick={endGame}> End </button>
-          </div>
-          )}
+      {!qna.length > 0 ? <p style={{ textAlign: 'center' }}>...loading</p> : playAgainBtn}
 
     </div>
 
