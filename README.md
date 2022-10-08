@@ -2,6 +2,9 @@
 
 Quizzical is a fun app that generates 5 random questions to test your general knowledge
 
+## Demo
+
+https://quizzical-reactjs.herokuapp.com/
 
 ## Screenshots
 
