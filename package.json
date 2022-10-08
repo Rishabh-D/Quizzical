@@ -15,8 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "webpack",
-    "watch": "webpack -w"
+    "build": "react-scripts build"
   },
   "browserslist": {
     "production": [
