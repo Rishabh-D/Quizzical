@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+.body{
+    margin:0px;
+    padding:0px;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}
+
+.start{
+    width: 550px;
+    height: 550px;
+
+    background: #F5F7FB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+
+}
+
+.start > h2{
+    height: 41px;
+}
+
+.start > .title{
+    width: 412px;
+    height: 41px;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color: #293264;
+}
+
+.start > .desc{
+    width: 318px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #293264;
+}
+
+.start > button {
+    width: 193px;
+    height: 52px;
+    background: #4D5B9E;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #F5F7FB;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+main{
+    border-bottom: 0.8px solid #DBDEF0;
+    padding-bottom: 15px;
+    
+}
+
+.questions{
+
+    font-size: 16px;
+    color: #293264;
+}
+
+.options{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border:solid red 0.05rem; */
+}
+.options > label{
+    margin-right : 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    /* line-height: 12px; */
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #293264;
+    border: 1.3px solid #4D5B9E;
+    border-radius: 7px;
+    padding:4px
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  /* -webkit-appearance: none; */
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0px;
+  outline: none;
+}
+
+.quize-page{
+    width: 550px;
+    /* height: 550px; */
+    background: #F5F7FB;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding:20px
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.solutions{
+    align-self: center;
+    width: 140px;
+    height: 40px;
+    background: #4D5B9E;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #F5F7FB;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top:20px;
+    
+}
+
+.endGame {
+    align-self: center;
+    width: 140px;
+    height: 40px;
+    background: crimson;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #F5F7FB;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+
+}
+
+.options > label {
+    cursor: pointer;
+}
+
+.options > label.selected {
+    background: #D6DBF5;
+    border-radius: 7.94239px;
+    border:none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    
+}
+
+.options > label.correct {
+    background: #94D7A2;
+    border-radius: 7.94239px;
+    border:none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
+.options > label.incorrect {
+    background: #F8BCBC;
+    border-radius: 7.94239px;
+    border:none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* .options > .unselected-correct{
+    background: #94D7A2;
+    border-radius: 7.94239px;
+    border: 0.794239px solid #4D5B9E;
+    opacity: 0.5;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+} */
+
+.options > label.ignore {
+    background: #F5F7FB;
+    border-radius: 7.94239px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    opacity: 0.5;
+    border: 0.794239px solid #4D5B9E;
+    border-radius: 7.94239px;
+    pointer-events: none;
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:23px
+}
+
+.result > p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center;
+    color: #293264;
+}
+
+
+
+
