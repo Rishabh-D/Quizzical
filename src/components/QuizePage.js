@@ -36,17 +36,14 @@ export default function QuizePage () {
   React.useEffect(() => {
     console.log('check play again', showAns.playAgain)
     if (showAns.playAgain === true) {
-    //   console.log('fetching data');
+      setQuizes([])
+      //   console.log('fetching data');
       fetch('https://opentdb.com/api.php?amount=5&difficulty=medium&type=multiple')
         .then((res) => res.json())
         .then((data) => data.results)
-        .then((data) => localStorage.setItem('dataKey', JSON.stringify(data)))
-        .then(() => {
+        .then((result) => {
           // clean the data
           // incorrect_answers
-          // question
-          // correct_answer
-          const result = JSON.parse(localStorage.getItem('dataKey'))
           // console.log(result);
           for (let i = 0; i < result.length; i += 1) {
             result[i].question = helperDecodeHtml(result[i].question)
@@ -85,6 +82,7 @@ export default function QuizePage () {
   }
 
   function endGame () {
+    setQuizes([])
     console.log('play again getting set')
     setShowAns((old) => ({
       ...old, show: false, score: 0, playAgain: false, endGame: true
