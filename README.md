@@ -4,7 +4,7 @@ Quizzical is a fun app that generates 5 random questions to test your general kn
 
 ## Demo
 
-https://quizzical-reactjs.herokuapp.com/
+https://quizzical-ochre.vercel.app/
 
 ## Screenshots
 
